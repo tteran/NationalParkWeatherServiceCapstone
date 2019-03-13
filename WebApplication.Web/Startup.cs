@@ -51,6 +51,7 @@ namespace WebApplication.Web
             services.AddScoped<IAuthProvider, SessionAuthProvider>();
             // For access to a dao
             services.AddTransient<IUserDAO>(m => new UserSqlDAO(Configuration.GetConnectionString("NPGeek")));
+            services.AddTransient<IParkDAO>(p => new ParkSqlDAO(Configuration.GetConnectionString("NPGeek")));
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }

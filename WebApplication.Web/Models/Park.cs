@@ -13,7 +13,7 @@ namespace WebApplication.Web.Models
         /// <summary>
         /// Gets the park code.
         /// </summary>
-        public int ParkCode { get; set; }
+        public string ParkCode { get; set; }
 
         /// <summary>
         /// Gets the park name.

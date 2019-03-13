@@ -67,22 +67,22 @@ namespace WebApplication.Web.Models
         {
             get
             {
-                if(Forecast == "Snow")
+                if(Forecast == "snow")
                 {
                     return "Pack snowshoes!";
                 }
 
-                if(Forecast == "Rain")
+                if(Forecast == "rain")
                 {
                     return "Pack rain gear and wear waterproof shoes.";
                 }
 
-                if(Forecast == "Thunderstorms")
+                if(Forecast == "thunderstorms")
                 {
                     return "Seek shelter and avoid hiking on exposed ridges.";
                 }
 
-                if(Forecast == "Sun")
+                if(Forecast == "sun")
                 {
                     return "Pack sunblock! It's gonna be a hot one!";
                 }

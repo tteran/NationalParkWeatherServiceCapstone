@@ -12,17 +12,38 @@ namespace WebApplication.Web.Controllers
     public class HomeController : Controller
     {
         private IParkDAO parkDAO;
-        public HomeController(IParkDAO parkDAO)
+        private IWeatherDAO weatherDAO;
+        public HomeController(IParkDAO parkDAO, IWeatherDAO weatherDAO)
         {
             this.parkDAO = parkDAO;
+            this.weatherDAO = weatherDAO;
         }
 
+        /// <summary>
+        /// The home page of the National Park Geek system
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
         public IActionResult Index()
         {
             IList<Park> parks = parkDAO.GetAllParks();
 
             return View(parks);
-        }       
+        }
+
+        /// <summary>
+        /// A detail view for one park
+        /// </summary>
+        /// <param name="parkCode"></param>
+        /// <returns></returns>
+        [HttpGet]
+        public IActionResult Detail(string parkCode)
+        {
+            Park park = parkDAO.GetAllParks().First(p => p.ParkCode == parkCode);
+            park.Forecast = weatherDAO.GetParkForecast(parkCode);
+
+            return View(park);
+        }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

@@ -1,24 +1,49 @@
-﻿body {
-    background-color: #152A03;
+﻿:root {
+    --deer: #B98166;
+    --laurel: #9FB994;
+    --pullman: #67401C;
+    --smoky: #152A03;
+    --camouflage: #7F7D68;
+}
+
+body {
+    background-color: var(--laurel);
+    color: var(--smoky);
 }
 
 nav {
-    margin-top: 25px;
-    background-color: #3F271B;
+    background-color: var(--pullman);
     width: 100%;
+}
+
+.top {
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    overflow: hidden;
+    background-color: var(--camouflage);
+    padding-top: 10px;
 }
 
 nav ul {
     display: flex;
+    margin-bottom: 0;
 }
 
 nav ul li {
     list-style: none;
     margin: 10px;
+    font-size: 1.5em;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+nav ul li:hover {
+    background-color: var(--deer);
 }
 
 a {
-    color: black;
+    color: var(--smoky);
     text-decoration: none;
 }
 
@@ -26,10 +51,15 @@ a {
 .park-list {
     display: flex;
     flex-direction: column;
+    margin-top: 280px;
+    z-index: 1;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .park {
     display: flex;
+    margin-bottom: 50px;
 }
 
 .name-description {
@@ -80,6 +110,7 @@ a {
     display: flex;
     justify-content: space-between;
     width: 40%;
+    background-color: 
 }
 
 .park-info span {
@@ -96,6 +127,7 @@ a {
     flex-direction: column;
     margin: 1em;
     align-items: center;
+    margin-top: 280px;
 }
 
 .header img {
@@ -114,4 +146,12 @@ a {
 
 .quote-source {
     margin-top: 0px;
+}
+
+.park-image {
+    margin-right: 25px;
+}
+
+.park-description {
+    width: 66%;
 }

@@ -115,3 +115,7 @@ a {
 .quote-source {
     margin-top: 0px;
 }
+
+.temp-conversion {
+    display: flex;
+}

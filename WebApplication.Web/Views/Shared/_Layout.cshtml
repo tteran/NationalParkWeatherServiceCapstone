@@ -7,16 +7,19 @@
     <link href="~/css/site.css" rel="stylesheet" />
 </head>
 <body>
-    <header class="header">
-        <img src="~/images/logo.png" />
-    </header>
+    <div class="top">
+        <header class="header">
+            <img src="~/images/logo.png" />
+        </header>
 
-    <nav class="nav">
-        <ul>
-            <li><a asp-controller="home" asp-action="Index">Home</a></li>
-            <li><a asp-controller="user" asp-action="Survey">Survey</a></li>
-        </ul>
-    </nav>
+        <nav class="nav">
+            <ul>
+                <li><a asp-controller="home" asp-action="Index">Home</a></li>
+                <li><a asp-controller="user" asp-action="Survey">Survey</a></li>
+            </ul>
+        </nav>
+    </div>
+  
 
     @RenderBody()
 

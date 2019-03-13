@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using WebApplication.Web.DAL;
 using WebApplication.Web.Extensions;
@@ -51,7 +52,7 @@ namespace WebApplication.Web.Controllers
         {
             HttpContext.Session.Set("TempPreference", tempPref);
 
-            return RedirectToAction("Detail", parkCode);
+            return RedirectToAction("Detail" ,parkCode);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

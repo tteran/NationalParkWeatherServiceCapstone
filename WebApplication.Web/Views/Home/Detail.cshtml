@@ -39,7 +39,7 @@
     <h2>5 Day Forecast</h2>
     <form method="post" asp-controller="home" asp-action="detail" asp-route-parkCode="@Model.ParkCode">
         <input type="radio" asp-route-tempPref="C" name="tempPref"/>Celcius<br />
-        <input type="radio" asp-route-tempPref="C" name="tempPref" checked/>Farenheit<br />
+        <input type="radio" asp-route-tempPref="F" name="tempPref" checked/>Farenheit<br />
         <input type="submit" value="Convert Temperatures" />
     </form>
 

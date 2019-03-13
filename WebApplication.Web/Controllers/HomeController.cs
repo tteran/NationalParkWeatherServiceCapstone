@@ -50,9 +50,9 @@ namespace WebApplication.Web.Controllers
         [HttpPost]
         public IActionResult Detail(string parkCode, string tempPref)
         {
-            HttpContext.Session.Set("TempPreference", tempPref);
+            HttpContext.Session.SetString("TempPreference", tempPref);
 
-            return RedirectToAction("Detail" ,parkCode);
+            return RedirectToAction("Detail" ,"Home", new { parkCode = parkCode });
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

@@ -1,8 +1,10 @@
 ﻿@model Park
-@using WebApplication.Web.Extensions
+@using Microsoft.AspNetCore.Http;
+@using Microsoft.AspNetCore.Mvc;
+
 @{
     ViewData["Title"] = "Detail";
-    string tempPref = Context.Session.Get<string>("tempPrefernce");
+    string tempPref = Context.Session.GetString("TempPreference");
 }
 
 <div class="detail-page">
@@ -37,9 +39,9 @@
     </div>
 
     <h2>5 Day Forecast</h2>
-    <form method="post" asp-controller="home" asp-action="detail" asp-route-parkCode="@Model.ParkCode">
-        <input type="radio" asp-route-tempPref="C" name="tempPref"/>Celcius<br />
-        <input type="radio" asp-route-tempPref="F" name="tempPref" checked/>Farenheit<br />
+    <form class="temp-conversion" method="post" asp-controller="home" asp-action="detail" asp-route-parkCode="@Model.ParkCode">
+        <input type="radio" value="C" name="tempPref" />Celcius<br />
+        <input type="radio" value="F" name="tempPref" checked />Farenheit<br />
         <input type="submit" value="Convert Temperatures" />
     </form>
 
@@ -49,15 +51,15 @@
             <div class="forecast-day">
                 <img src="~/images/weather/@(day.Forecast).png" />
                 <div class="temps">
-                    @if (tempPref == "F")
+                    @if (tempPref == "C")
                     {
-                        <p><span>High</span> @(day.High)&deg; F</p>
-                        <p><span>Low</span> @(day.Low)&deg; F</p>
+                        <p><span>High</span> @(((day.High - 32) / 1.8).ToString("N2"))&deg; C</p>
+                        <p><span>Low</span> @(((day.Low - 32) / 1.8).ToString("N2"))&deg; C</p>
                     }
                     else
                     {
-                        <p><span>High</span> @(((day.High - 32)/1.8).ToString("N2"))&deg; C</p>
-                        <p><span>Low</span> @(((day.Low-32)/1.8).ToString("N2"))&deg; C</p>
+                        <p><span>High</span> @(day.High)&deg; F</p>
+                        <p><span>Low</span> @(day.Low)&deg; F</p>
                     }
 
                 </div>

@@ -62,5 +62,37 @@ namespace WebApplication.Web.Models
                 return warning;
             }
         }
+
+        public string WeatherWarning
+        {
+            get
+            {
+                if(Forecast == "Snow")
+                {
+                    return "Pack snowshoes!";
+                }
+
+                if(Forecast == "Rain")
+                {
+                    return "Pack rain gear and wear waterproof shoes.";
+                }
+
+                if(Forecast == "Thunderstorms")
+                {
+                    return "Seek shelter and avoid hiking on exposed ridges.";
+                }
+
+                if(Forecast == "Sun")
+                {
+                    return "Pack sunblock! It's gonna be a hot one!";
+                }
+
+                else
+                {
+                    return "";
+                }
+
+            }
+        }
     }
 }

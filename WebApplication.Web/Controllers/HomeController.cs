@@ -4,15 +4,24 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using WebApplication.Web.DAL;
 using WebApplication.Web.Models;
 
 namespace WebApplication.Web.Controllers
 {
     public class HomeController : Controller
     {
+        private IParkDAO parkDAO;
+        public HomeController(IParkDAO parkDAO)
+        {
+            this.parkDAO = parkDAO;
+        }
+
         public IActionResult Index()
-        {            
-            return View();
+        {
+            IList<Park> parks = parkDAO.GetAllParks();
+
+            return View(parks);
         }       
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

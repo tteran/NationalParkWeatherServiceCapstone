@@ -6,9 +6,14 @@
     --camouflage: #7F7D68;
 }
 
+@import url('https://fonts.googleapis.com/css?family=Oxygen');
+
+
+
 body {
     background-color: var(--laurel);
     color: var(--smoky);
+    font-family: 'Oxygen', sans-serif;
 }
 
 nav {
@@ -23,6 +28,16 @@ nav {
     overflow: hidden;
     background-color: var(--camouflage);
     padding-top: 10px;
+    padding-left: 0;
+}
+
+h1 {
+    font-size: 36px;
+}
+
+h1 span {
+    font-size: 24px;
+    font-weight: 300;
 }
 
 nav ul {
@@ -154,4 +169,18 @@ a {
 
 .park-description {
     width: 66%;
+}
+
+.temp-conversion {
+    display: flex;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.temp-conversion input {
+    margin: 0px 10px;
+}
+
+.temp-conversion input[type=submit]{
+    padding: 5px;
 }

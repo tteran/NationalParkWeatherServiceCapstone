@@ -10,10 +10,15 @@
     {
     <div class="park">
         <a asp-controller="home" asp-action="detail" asp-route-parkCode="@park.ParkCode">
-            <h1>@park.ParkName <span class="state">in @park.State</span></h1>
-            <img class="park-image" src="~/images/parks/@(park.ParkCode).jpg" />
-        </a>  
-        <p class="park-description">@park.Description</p>
+            <img class="park-image" src="~/images/parks/@(park.ParkCode).jpg" />           
+        </a>
+        <div class="name-description">
+            <a asp-controller="home" asp-action="detail">
+                <h1 class="park-name">@park.ParkName <span class="park-state">in @park.State</span></h1>
+            </a>
+            <p class="park-description">@park.Description</p>
+        </div>
+     
     </div>
     }
 </div>

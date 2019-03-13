@@ -1,1 +1,22 @@
-﻿
+﻿.park-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.park {
+    display: flex;
+}
+
+.name-description {
+    display: flex;
+    flex-direction: column;
+}
+
+.park-name, .park-state {
+    text-decoration: none;
+}
+
+.header{
+    width: 100%;
+    height: auto;
+}

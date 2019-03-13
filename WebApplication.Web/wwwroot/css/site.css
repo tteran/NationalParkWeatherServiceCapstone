@@ -1,4 +1,29 @@
-﻿.park-list {
+﻿body {
+    background-color: #152A03;
+}
+
+nav {
+    margin-top: 25px;
+    background-color: #3F271B;
+    width: 100%;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li {
+    list-style: none;
+    margin: 10px;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+
+.park-list {
     display: flex;
     flex-direction: column;
 }
@@ -47,9 +72,18 @@
     justify-content: space-around;
 }
 
+.temps span {
+    font-weight: bold;
+}
+
 .park-info {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    width: 40%;
+}
+
+.park-info span {
+    font-weight: bold;
 }
 
 .detail-image {
@@ -69,3 +103,15 @@
     height: auto;
 }
 
+.description {
+    width: 60%;
+}
+
+.quote {
+    margin-bottom: 0px;
+    font-style: italic;
+}
+
+.quote-source {
+    margin-top: 0px;
+}

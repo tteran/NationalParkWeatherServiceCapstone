@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using WebApplication.Web.DAL;
+using WebApplication.Web.Extensions;
 using WebApplication.Web.Models;
 
 namespace WebApplication.Web.Controllers
@@ -43,6 +44,14 @@ namespace WebApplication.Web.Controllers
             park.Forecast = weatherDAO.GetParkForecast(parkCode);
 
             return View(park);
+        }
+
+        [HttpPost]
+        public IActionResult Detail(string parkCode, string tempPref)
+        {
+            HttpContext.Session.Set("TempPreference", tempPref);
+
+            return RedirectToAction("Detail", parkCode);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

@@ -53,7 +53,16 @@ namespace WebApplication.Web.DAL
                 Acreage = Convert.ToDouble(reader["acreage"]),
                 ElevationInFeet = Convert.ToDouble(reader["elevationInFeet"]),
                 MilesOfTrail = Convert.ToDouble(reader["milesOfTrail"]),
-            }
+                NumberOfCampsites = Convert.ToInt32(reader["numberOfCampsites"]),
+                Climate = Convert.ToString(reader["climate"]),
+                YearFounded = Convert.ToString(reader["yearFounded"]),
+                AnnualNumberOfVisitors = Convert.ToDouble(reader["annualVisitorCount"]),
+                Quote = Convert.ToString(reader["inspirationalQuote"]),
+                QuoteSource = Convert.ToString(reader["inspirationalQuoteSource"]),
+                Description = Convert.ToString(reader["parkDescription"]),
+                EntryFee = Convert.ToDecimal(reader["entryFee"]),
+                NumberOfAnimalSpecies = Convert.ToInt32(reader["numberOfAnimalSpecies"])
+            };
             return park;
         }
     }

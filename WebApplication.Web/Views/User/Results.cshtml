@@ -14,15 +14,19 @@
     }
 
 
-    <img src="~/images/geek.png" />
+    <img class="geek" src="~/images/geek.png" />
     <h1>Survey Says:</h1>
     <ol>
         @foreach (SurveyResult result in Model)
         {
             <li>
-                <img src="~/images/parks/@(result.ParkCode).jpg" />
-                <h2>@result.ParkName</h2>
-                <h2><span>Number of Votes:</span> @result.Votes</h2>
+                <div class="ranked-park">
+                    <img src="~/images/parks/@(result.ParkCode).jpg" />
+                    <div class="survey-info">
+                        <h2>@result.ParkName</h2>
+                        <h2><span>Number of Votes:</span> @result.Votes</h2>
+                    </div>
+                </div>
             </li>
         }
     </ol>

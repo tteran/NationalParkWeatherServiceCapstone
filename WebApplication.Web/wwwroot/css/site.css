@@ -211,6 +211,42 @@ a {
     display: flex;
 }
 
+.geek {
+    height: 250px;
+    display: inline-block;
+    padding-right: 25px;
+}
+
 .survey-results {
     margin-top: 280px;
+    margin-left: 1em;
+}
+
+.survey-results h1 {
+    display: inline-block;
+    font-size: 10em;
+}
+
+.survey-results li {
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+.survey-results li h2 {
+    font-size: 24px;
+}
+
+.ranked-park {
+    display: flex;
+}
+
+.ranked-park img {
+    height: 200px;
+    width: auto;
+}
+
+
+.survey-info {
+    display: flex;
+    flex-direction: column;
 }

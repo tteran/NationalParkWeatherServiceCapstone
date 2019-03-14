@@ -8,7 +8,7 @@
 
 @import url('https://fonts.googleapis.com/css?family=Oxygen');
 
-
+/*Layout Styling*/
 
 body {
     background-color: var(--laurel);
@@ -31,15 +31,6 @@ nav {
     padding-left: 0;
 }
 
-h1 {
-    font-size: 36px;
-}
-
-h1 span {
-    font-size: 24px;
-    font-weight: 300;
-}
-
 nav ul {
     display: flex;
     margin-bottom: 0;
@@ -57,11 +48,28 @@ nav ul li:hover {
     background-color: var(--deer);
 }
 
+.header img {
+    width: 30%;
+    height: auto;
+}
+
+/*Layout Stylingn End*/
+
+/*Home Page Styling*/
+
+h1 {
+    font-size: 36px;
+}
+
+h1 span {
+    font-size: 24px;
+    font-weight: 300;
+}
+
 a {
     color: var(--smoky);
     text-decoration: none;
 }
-
 
 .park-list {
     display: flex;
@@ -86,51 +94,19 @@ a {
     text-decoration: none;
 }
 
-.header{
-    width: 100%;
-    height: auto;
-}
-
-.forecast {
-    display: flex;
-    justify-content: space-around;
-}
-
-.forecast-day {
-    border: 1px solid black;
-    background-color: skyblue;
-    width: 18%;
-    text-align: center;
-}
-
-.forecast-day img{
-    width: 100%;
-}
-
-.forecast-day .warning {
-    color: firebrick;
-    font-weight: bolder;
-}
-
-.forecast-day .temps {
-    display: flex;
-    justify-content: space-around;
-}
-
-.temps span {
-    font-weight: bold;
-}
-
 .park-info {
     display: flex;
     justify-content: space-between;
     width: 40%;
-    background-color: 
 }
 
 .park-info span {
     font-weight: bold;
 }
+
+/*Home Page styling end*/
+
+/*Detail View Styling*/
 
 .detail-image {
     width: 50%;
@@ -143,15 +119,6 @@ a {
     margin: 1em;
     align-items: center;
     margin-top: 280px;
-}
-
-.header img {
-    width: 30%;
-    height: auto;
-}
-
-.description {
-    width: 60%;
 }
 
 .quote {
@@ -171,6 +138,44 @@ a {
     width: 66%;
 }
 
+.description {
+    width: 60%;
+}
+
+.forecast {
+    display: flex;
+    justify-content: space-around;
+}
+
+.forecast-day {
+    border: 1px solid black;
+    background-color: skyblue;
+    width: 18%;
+    text-align: center;
+}
+
+.temp span {
+    font-weight: bold;
+}
+
+.forecast-day img {
+    width: 100%;
+}
+
+.forecast-day .warning {
+    color: firebrick;
+    font-weight: bolder;
+}
+
+.forecast-day .temps {
+    display: flex;
+    justify-content: space-around;
+}
+
+/*Detail View Styling End*/
+
+/*Temp Conversion Styling*/
+
 .temp-conversion {
     display: flex;
     margin-bottom: 10px;
@@ -184,3 +189,5 @@ a {
 .temp-conversion input[type=submit]{
     padding: 5px;
 }
+
+/*Temp Conversion Styling End*/

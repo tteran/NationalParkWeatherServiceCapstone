@@ -16,21 +16,25 @@ namespace WebApplication.Web.DAL
         }
 
 
-        public IList<SurveyForm> GetSurveyResults()
+        public IList<SurveyResult> GetSurveyResults()
         {
-            IList<SurveyForm> results = new List<SurveyForm>();
+            IList<SurveyResult> results = new List<SurveyResult>();
 
             try
             {
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {
                     conn.Open();
-                    SqlCommand cmd = new SqlCommand("select * from survey_result", conn);
+                    SqlCommand cmd = new SqlCommand(@"select survey_result.parkCode as parkCode, park.parkName as parkNAME, count(*) as 'count'
+                                                        from survey_result
+                                                        join park on survey_result.parkCode = park.parkCode
+                                                        group by survey_result.parkCode, park.parkName
+                                                        order by count DESC, park.parkName;", conn);
                     SqlDataReader reader = cmd.ExecuteReader();
 
                     while (reader.Read())
                     {
-                        SurveyForm survey = ConvertReaderToSurvey(reader);
+                        SurveyResult survey = ConvertReaderToSurvey(reader);
                         results.Add(survey);
                     }
                 }
@@ -44,14 +48,13 @@ namespace WebApplication.Web.DAL
             return results;
         }
 
-        private SurveyForm ConvertReaderToSurvey(SqlDataReader reader)
+        private SurveyResult ConvertReaderToSurvey(SqlDataReader reader)
         {
-            SurveyForm survey = new SurveyForm()
+            SurveyResult survey = new SurveyResult()
             {
                 ParkCode = Convert.ToString(reader["parkCode"]),
-                Email = Convert.ToString(reader["emailAddress"]),
-                State = Convert.ToString(reader["state"]),
-                ActivityLevel = Convert.ToString(reader["activityLevel"])
+                ParkName = Convert.ToString(reader["parkName"]),
+                Votes = Convert.ToInt32(reader["count"])
             };
             return survey;
         }

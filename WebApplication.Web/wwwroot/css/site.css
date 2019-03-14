@@ -21,6 +21,9 @@ body {
 nav {
     background-color: var(--pullman);
     width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .top {
@@ -31,12 +34,14 @@ nav {
     background-color: var(--camouflage);
     padding-top: 10px;
     padding-left: 0;
-    height: 25vh;
+}
+nav .user-nav {
+    margin-right: 10px;
 }
 
 nav ul {
     display: flex;
-    margin-bottom: 0;
+    margin: 0px;
 }
 
 nav ul li {
@@ -94,7 +99,7 @@ a {
 .park-list {
     display: flex;
     flex-direction: column;
-    margin-top: 27vh;
+    margin-top: 280px;
     z-index: 1;
     margin-left: 10px;
     margin-right: 10px;
@@ -138,7 +143,7 @@ a {
     flex-direction: column;
     margin:  0 1em;
     align-items: center;
-    margin-top: 27vh;
+    margin-top: 280px;
 }
 
 .quote {
@@ -216,7 +221,7 @@ a {
 
 /*Survey Styling*/
 .survey {
-    margin-top: 27vh;
+    margin-top: 280px;
     margin-left: 1em;
 }
 
@@ -245,7 +250,7 @@ a {
 }
 
 .survey-results {
-    margin-top: 27vh;
+    margin-top: 280px;
     margin-left: 2em;
 }
 
@@ -257,6 +262,10 @@ a {
 
 .survey-results li{
     font-size: 50px;
+}
+
+.survey-results ol {
+    margin-bottom: 50px;
 }
 
 .ranked-park {

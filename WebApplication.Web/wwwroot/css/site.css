@@ -15,7 +15,7 @@ body {
     font-family: 'Oxygen', sans-serif;
     margin: 0px;
     position: relative;
-    min-height: 100vh;
+    min-height: 75vh;
 }
 
 nav {
@@ -31,6 +31,7 @@ nav {
     background-color: var(--camouflage);
     padding-top: 10px;
     padding-left: 0;
+    height: 25vh;
 }
 
 nav ul {
@@ -93,7 +94,7 @@ a {
 .park-list {
     display: flex;
     flex-direction: column;
-    margin-top: 280px;
+    margin-top: 27vh;
     z-index: 1;
     margin-left: 10px;
     margin-right: 10px;
@@ -135,9 +136,9 @@ a {
 .detail-page {
     display: flex;
     flex-direction: column;
-    margin: 1em;
+    margin:  0 1em;
     align-items: center;
-    margin-top: 280px;
+    margin-top: 27vh;
 }
 
 .quote {
@@ -164,6 +165,7 @@ a {
 .forecast {
     display: flex;
     justify-content: space-around;
+    margin-bottom: 50px;
 }
 
 .forecast-day {
@@ -214,7 +216,7 @@ a {
 
 /*Survey Styling*/
 .survey {
-    margin-top: 280px;
+    margin-top: 27vh;
     margin-left: 1em;
 }
 
@@ -243,7 +245,7 @@ a {
 }
 
 .survey-results {
-    margin-top: 280px;
+    margin-top: 27vh;
     margin-left: 2em;
 }
 

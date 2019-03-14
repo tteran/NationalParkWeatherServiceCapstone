@@ -9,11 +9,13 @@
 @import url('https://fonts.googleapis.com/css?family=Oxygen');
 
 /*Layout Styling*/
-
 body {
     background-color: var(--laurel);
     color: var(--smoky);
     font-family: 'Oxygen', sans-serif;
+    margin: 0px;
+    position: relative;
+    min-height: 100vh;
 }
 
 nav {
@@ -51,6 +53,23 @@ nav ul li:hover {
 .header img {
     width: 30%;
     height: auto;
+}
+
+footer {
+    background-color: var(--pullman);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer p {
+    text-align: right;
+    padding: 5px;
+    margin: 0px;
+}
+
+.footer img {
+    height: 25px;
 }
 
 /*Layout Stylingn End*/
@@ -165,6 +184,7 @@ a {
 .forecast-day .warning {
     color: firebrick;
     font-weight: bolder;
+    padding: 10px;
 }
 
 .forecast-day .temps {
@@ -202,6 +222,11 @@ a {
     margin-bottom: 5px;
 }
 
+.survey form label{
+    display: inline-block;
+    width: 200px;
+}
+
 .survey label {
     font-weight: bold;
     margin-right: 10px;
@@ -219,4 +244,30 @@ a {
 
 .survey-results {
     margin-top: 280px;
+    margin-left: 2em;
+}
+
+.survey-results h1 {
+    display: inline-block;
+    font-size: 10em;
+    margin-bottom: 15px;
+}
+
+.survey-results li{
+    font-size: 50px;
+}
+
+.ranked-park {
+    margin-bottom: 10px;
+    display: flex;
+}
+
+.ranked-park img {
+    height: 200px;
+    width: auto;
+    margin-right: 25px;
+}
+
+.ranked-park h2 {
+    font-size: 24px;
 }

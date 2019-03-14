@@ -68,7 +68,7 @@ namespace WebApplication.Web.DAL
                 using(SqlConnection conn = new SqlConnection(connectionString))
                 {
                     conn.Open();
-                    SqlCommand cmd = new SqlCommand("insert into survey_results (parkCode, emailAddress, state, activityLevel) values @parkCode, @emailAddress, @state, @activityLevel", conn);
+                    SqlCommand cmd = new SqlCommand("insert into survey_result (parkCode, emailAddress, state, activityLevel) values (@parkCode, @emailAddress, @state, @activityLevel)", conn);
                     cmd.Parameters.AddWithValue("@parkCode", survey.ParkCode);
                     cmd.Parameters.AddWithValue("@emailAddress", survey.Email);
                     cmd.Parameters.AddWithValue("@state", survey.State);

@@ -10,6 +10,6 @@ namespace WebApplication.Web.DAL
     {
         bool SaveSurvey(SurveyForm survey);
 
-        IList<SurveyForm> GetSurveyResults();
+        IList<SurveyResult> GetSurveyResults();
     }
 }

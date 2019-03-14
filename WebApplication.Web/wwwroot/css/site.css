@@ -191,3 +191,26 @@ a {
 }
 
 /*Temp Conversion Styling End*/
+
+/*Survey Styling*/
+.survey {
+    margin-top: 280px;
+    margin-left: 1em;
+}
+
+.survey div {
+    margin-bottom: 5px;
+}
+
+.survey label {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.activity-radio {
+    display: flex;
+}
+
+.survey-results {
+    margin-top: 280px;
+}

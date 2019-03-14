@@ -211,13 +211,12 @@ a {
     display: flex;
 }
 
+.geek {
+    height: 250px;
+    display: inline-block;
+    padding-right: 25px;
+}
+
 .survey-results {
     margin-top: 280px;
 }
-
-form div label {
-    width: 200px;
-    display: inline-block;
-}
-
-/*Survey Styling End*/

@@ -26,5 +26,10 @@ namespace WebApplication.Web.Models
         /// The Voter's activity level
         /// </summary>
         public string ActivityLevel { get; set; }
+
+        /// <summary>
+        /// A list of parks available to vote for
+        /// </summary>
+        public IList<Park> Parks { get; set; }
     }
 }

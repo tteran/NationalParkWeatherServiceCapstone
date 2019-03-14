@@ -53,8 +53,8 @@
                 <div class="temps">
                     @if (tempPref == "C")
                     {
-                        <p><span>High</span> @(((day.High - 32) / 1.8).ToString("N2"))&deg; C</p>
-                        <p><span>Low</span> @(((day.Low - 32) / 1.8).ToString("N2"))&deg; C</p>
+                        <p><span>High</span> @(((day.High - 32) / 1.8).ToString("N1"))&deg; C</p>
+                        <p><span>Low</span> @(((day.Low - 32) / 1.8).ToString("N1"))&deg; C</p>
                     }
                     else
                     {

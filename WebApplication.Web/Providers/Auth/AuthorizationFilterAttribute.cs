@@ -42,7 +42,7 @@ namespace WebApplication.Web.Providers.Auth
             {                
                 context.Result = new RedirectToRouteResult(new
                 {
-                    controller = "account",
+                    controller = "user",
                     action = "login",                    
                 });
                 return;

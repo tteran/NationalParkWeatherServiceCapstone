@@ -25,10 +25,12 @@ namespace WebApplication.Web.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            var user = authProvider.GetCurrentUser();
+            return View(user);
         }
 
         [HttpGet]
+        [AuthorizationFilter]
         public IActionResult Survey()
         {
             SurveyForm survey = new SurveyForm();
@@ -113,6 +115,13 @@ namespace WebApplication.Web.Controllers
             {
                 return View(model);
             }
+        }
+
+        public IActionResult Logoff()
+        {
+            authProvider.LogOff();
+
+            return RedirectToAction("Index", "Home");
         }
 
     }

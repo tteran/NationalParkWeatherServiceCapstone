@@ -80,6 +80,7 @@ footer {
 
 main {
     margin-top: 280px;
+    margin-left: 1em;
 }
 
 /*Layout Stylingn End*/
@@ -230,12 +231,12 @@ a {
     margin-bottom: 5px;
 }
 
-.survey form label{
+/*.survey*/ form label{
     display: inline-block;
     width: 200px;
 }
 
-.survey label {
+/*.survey*/ label {
     font-weight: bold;
     margin-right: 10px;
 }
@@ -298,6 +299,7 @@ a {
 
     main {
         margin-top: 200px;
+        margin-left: 1em;
     }
 
     .park-image {

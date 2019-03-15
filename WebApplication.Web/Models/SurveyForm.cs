@@ -20,6 +20,7 @@ namespace WebApplication.Web.Models
         /// </summary>
         [Display(Name = "EMAIL")]
         [Required]
+        [EmailAddress]
         public string Email { get; set; }
 
         /// <summary>

@@ -9,10 +9,6 @@ Module 3 capstone at Tech Elevator
 * Temperature can be toggled from farenheit to celsius and user's preference is saved in session.
 * Alerts are displayed based on temperature and weather conditions
 
-## Screenshots
-![Main Page View](Screenshots/MainPage.png)
-![Weather Forecast](Screenshots/WeatherView.png)
-
 ## Languages and Tech Used
 * [C#](https://docs.microsoft.com/en-us/dotnet/csharp/)
 * [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)

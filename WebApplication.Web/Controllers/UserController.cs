@@ -23,12 +23,20 @@ namespace WebApplication.Web.Controllers
 
         }
 
+        /// <summary>
+        /// A view for user information
+        /// </summary>
+        /// <returns></returns>
         public IActionResult Index()
         {
             var user = authProvider.GetCurrentUser();
             return View(user);
         }
 
+        /// <summary>
+        /// A view for the survey. Registered users only.
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         [AuthorizationFilter]
         public IActionResult Survey()
@@ -38,6 +46,11 @@ namespace WebApplication.Web.Controllers
             return View(survey);
         }
 
+        /// <summary>
+        /// The method to save survey entries and redirect to results
+        /// </summary>
+        /// <param name="survey"></param>
+        /// <returns></returns>
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult Survey(SurveyForm survey)
@@ -52,6 +65,10 @@ namespace WebApplication.Web.Controllers
             return RedirectToAction("Results");
         }
 
+        /// <summary>
+        /// The results of the survey
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public IActionResult Results()
         {
@@ -60,12 +77,21 @@ namespace WebApplication.Web.Controllers
             return View(results);
         }
 
+        /// <summary>
+        /// A view to register
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public IActionResult Register()
         {
             return View();
         }
 
+        /// <summary>
+        /// The method to accept registration forms
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult Register(RegisterViewModel model)
@@ -86,12 +112,21 @@ namespace WebApplication.Web.Controllers
             }
         }
 
+        /// <summary>
+        /// A view to log in
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public IActionResult Login()
         {
             return View();
         }
 
+        /// <summary>
+        /// The mehtod to accept login forms
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult Login(LoginViewModel model)
@@ -117,6 +152,10 @@ namespace WebApplication.Web.Controllers
             }
         }
 
+        /// <summary>
+        /// A method for logging off
+        /// </summary>
+        /// <returns></returns>
         public IActionResult Logoff()
         {
             authProvider.LogOff();

@@ -47,6 +47,12 @@ namespace WebApplication.Web.Controllers
             return View(park);
         }
 
+        /// <summary>
+        /// An overload to save temperature preference to session
+        /// </summary>
+        /// <param name="parkCode"></param>
+        /// <param name="tempPref"></param>
+        /// <returns></returns>
         [HttpPost]
         public IActionResult Detail(string parkCode, string tempPref)
         {
@@ -55,6 +61,10 @@ namespace WebApplication.Web.Controllers
             return RedirectToAction("Detail" ,"Home", new { parkCode = parkCode });
         }
 
+        /// <summary>
+        /// We've been told this does something, we don't use it though. If we leave the development environment it'll be important.
+        /// </summary>
+        /// <returns></returns>
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

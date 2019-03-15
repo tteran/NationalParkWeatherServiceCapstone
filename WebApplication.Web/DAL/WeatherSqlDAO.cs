@@ -15,7 +15,11 @@ namespace WebApplication.Web.DAL
             this.connectionString = connectionString;
         }
 
-
+        /// <summary>
+        /// A method to retrieve the weather data for one park
+        /// </summary>
+        /// <param name="parkCode"></param>
+        /// <returns>a list of weather objects</returns>
         public IList<Weather> GetParkForecast(string parkCode)
         {
             IList<Weather> forecast = new List<Weather>();
@@ -45,6 +49,11 @@ namespace WebApplication.Web.DAL
             return forecast;
         }
 
+        /// <summary>
+        /// Converts sql data into a weather object
+        /// </summary>
+        /// <param name="reader"></param>
+        /// <returns></returns>
         private Weather ConvertReaderToWeather(SqlDataReader reader)
         {
             Weather weather = new Weather()

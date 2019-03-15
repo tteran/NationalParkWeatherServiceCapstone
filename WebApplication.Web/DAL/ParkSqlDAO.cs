@@ -15,6 +15,10 @@ namespace WebApplication.Web.DAL
             this.connectionString = connectionString;
         }
 
+        /// <summary>
+        /// A method to get all parks
+        /// </summary>
+        /// <returns>A list of parks</returns>
         public IList<Park> GetAllParks()
         {
             IList<Park> parks = new List<Park>();
@@ -43,6 +47,11 @@ namespace WebApplication.Web.DAL
             return parks;
         }
 
+        /// <summary>
+        /// Converts sql data to a park object
+        /// </summary>
+        /// <param name="reader"></param>
+        /// <returns></returns>
         private Park ConvertReaderToPark(SqlDataReader reader)
         {
             Park park = new Park()

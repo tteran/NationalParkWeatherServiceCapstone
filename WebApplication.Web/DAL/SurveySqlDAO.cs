@@ -15,7 +15,10 @@ namespace WebApplication.Web.DAL
             this.connectionString = connectionString;
         }
 
-
+        /// <summary>
+        /// A method to retrieve survey results
+        /// </summary>
+        /// <returns>a list of survey results</returns>
         public IList<SurveyResult> GetSurveyResults()
         {
             IList<SurveyResult> results = new List<SurveyResult>();
@@ -48,6 +51,11 @@ namespace WebApplication.Web.DAL
             return results;
         }
 
+        /// <summary>
+        /// Converts sql data into a survey result
+        /// </summary>
+        /// <param name="reader"></param>
+        /// <returns></returns>
         private SurveyResult ConvertReaderToSurvey(SqlDataReader reader)
         {
             SurveyResult survey = new SurveyResult()
@@ -59,6 +67,11 @@ namespace WebApplication.Web.DAL
             return survey;
         }
 
+        /// <summary>
+        /// Saves a survey form to the database
+        /// </summary>
+        /// <param name="survey"></param>
+        /// <returns>if the method executed without a sqlexception</returns>
         public bool SaveSurvey(SurveyForm survey)
         {
             bool output;

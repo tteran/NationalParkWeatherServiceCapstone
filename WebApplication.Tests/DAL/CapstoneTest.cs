@@ -12,10 +12,14 @@ namespace WebApplication.Tests.DAL
     [TestClass]
     public class CapstoneTest
     {
-        protected string ConnectionString { get; } = "Server =.\\SQLEXPRESS;Initial Catalog = NPGeek; Integrated Security = True";
+        protected string ConnectionString { get; } = "Data Source =.\\SQLEXPRESS;Initial Catalog = NPGeek; Integrated Security = True";
 
         private TransactionScope transaction;
 
+        protected int NewUserId { get; private set; }
+        protected string ParkCode { get; private set; }
+        protected int ForecastValue { get; private set; }
+        protected int SurveyResultId { get; private set; }
 
         [TestInitialize]
         public void Setup()
@@ -32,7 +36,10 @@ namespace WebApplication.Tests.DAL
 
                 if (reader.Read())
                 {
-
+                    this.NewUserId = Convert.ToInt32(reader["newUsersId"]);
+                    this.ParkCode = Convert.ToString(reader["parkCode"]);
+                    this.ForecastValue = Convert.ToInt32(reader["forecastValue"]);
+                    this.SurveyResultId = Convert.ToInt32(reader["newSurveyResultId"]);
                 }
             }
         }
@@ -56,5 +63,4 @@ namespace WebApplication.Tests.DAL
 
     }
 
-}
 }

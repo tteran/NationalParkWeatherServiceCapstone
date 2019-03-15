@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using WebApplication.Web.DAL;
-using WebApplication.Web.Extensions;
 using WebApplication.Web.Models;
 
 namespace WebApplication.Web.Controllers

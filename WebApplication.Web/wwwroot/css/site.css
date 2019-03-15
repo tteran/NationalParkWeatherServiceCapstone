@@ -78,6 +78,10 @@ footer {
     height: 25px;
 }
 
+main {
+    margin-top: 280px;
+}
+
 /*Layout Stylingn End*/
 
 /*Home Page Styling*/
@@ -99,7 +103,6 @@ a {
 .park-list {
     display: flex;
     flex-direction: column;
-    margin-top: 280px;
     z-index: 1;
     margin-left: 10px;
     margin-right: 10px;
@@ -143,7 +146,6 @@ a {
     flex-direction: column;
     margin:  0 1em;
     align-items: center;
-    margin-top: 280px;
 }
 
 .quote {
@@ -221,7 +223,6 @@ a {
 
 /*Survey Styling*/
 .survey {
-    margin-top: 280px;
     margin-left: 1em;
 }
 
@@ -250,7 +251,6 @@ a {
 }
 
 .survey-results {
-    margin-top: 280px;
     margin-left: 2em;
 }
 
@@ -281,4 +281,40 @@ a {
 
 .ranked-park h2 {
     font-size: 24px;
+}
+
+/*Media Queries Styling*/
+
+@media screen and (width: 1280px)
+{
+    h1 {
+        font-size: 32px;
+    }
+
+    h1 span {
+        font-size: 18px;
+        font-weight: 300;
+    }
+
+    main {
+        margin-top: 200px;
+    }
+
+    .park-image {
+        width: auto;
+        height: 250px;
+    }
+
+    .geek {
+        width: auto;
+        height: 150px;
+    }
+
+    .survey-results h1 {
+        font-size: 5em;
+    }
+
+    .ranked-park {
+        font-size: 18px;
+    }
 }

@@ -9,6 +9,12 @@ Module 3 capstone at Tech Elevator
 * Temperature can be toggled from farenheit to celsius and user's preference is saved in session.
 * Alerts are displayed based on temperature and weather conditions
 
+## Screenshots
+* A view of our main page.
+![Main View Page](Screenshots/MainPage.png)
+* Portion of our detail view page which displays our 5-day weather forecast and the farenheit & celsius converter buttons.
+![Weather Forecast](Screenshots/WeatherView.png)
+
 ## Languages and Tech Used
 * [C#](https://docs.microsoft.com/en-us/dotnet/csharp/)
 * [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
@@ -20,4 +26,3 @@ Module 3 capstone at Tech Elevator
 
 ## Developed by
 * Ryan Pearce & Tyler Teran
-
